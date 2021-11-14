@@ -7,8 +7,11 @@ class BookList extends Component{
     render() {
         const bookItems = this.props.book.map( book => {
             return(
-                <BookListItem book={book} key={book.ISBN}>
-                </BookListItem>
+                <BookListItem book={book}
+                              key={book.ISBN}
+                              onSelectedBook={this.props.onSelectedBook}
+
+                />
             )
         })
         return(
